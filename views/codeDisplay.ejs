@@ -51,17 +51,22 @@
     span{
         color: rgba(22, 160, 162, 0.929);
     }
+    .btn{
+        display: flex;
+    }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>
-    <form action="/new" method="get">
     <nav class="navbar">
         <h2 class="name">{ <span>Doje</span> :: bins }</h2>
-        <div><button><i class="fa fa-plus" style="font-size:24px"></i></button></div>  
+        <div class="btn">
+            <form action="/new" method="get"><button><i class="fa fa-plus" style="font-size:24px"></i></button></form>
+            <button onclick="Copy()">Copy</button>
+        </div>  
     </nav>
-    </form>
+    
     <div class="wrapper">
         <div class="line">
             <% for(let i=1;i<=code.split('\n').length;i++) { %>
@@ -74,5 +79,13 @@
             <pre><code><%= code %></code></pre>
         </div>
     </div>
+    <script>
+       const Copy = ()=>{ 
+        navigator.clipboard
+  .writeText(window.location.href)
+  .then(() => alert("Copied to clipboard"))
+  .catch((err) => console.log(err))
+       }
+    </script>
 </body>
 </html>

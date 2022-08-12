@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const db = require('./db/schema');
 const mongo = require('./db/mongo');
 
+const port = process.env.PORT || 3000;
+
 app.set('view engine','ejs');
 app.use(express.urlencoded({extended:true}))
 app.get('/',(req,resp)=>{
@@ -47,6 +49,6 @@ app.get('/:id',async(req,resp)=>{
 
 })
 
-app.listen(3000,()=>{
-    console.log(`working on 3000`);
-})
+app.listen(port, () => {
+    console.log(`Listening On ${port}`);
+});
