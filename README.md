@@ -1,4 +1,4 @@
-Simple Site Share Code Snippet Through Link 
+Simple Site To Share Code Snippet Through Link 
 
 Step 1. Click on a + button :
 
