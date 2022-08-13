@@ -54,9 +54,17 @@
     .btn{
         display: flex;
     }
+    #display
+    {
+        font-size: 20px;
+        position: relative;
+        top: 500px;
+        left: 700px;
+        background-color: rgba(67, 67, 67, 0.984);
+    }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>Dojebin~</title>
 </head>
 <body>
     <nav class="navbar">
@@ -66,7 +74,7 @@
             <button onclick="Copy()">Copy</button>
         </div>  
     </nav>
-    
+    <span id="display"></span>
     <div class="wrapper">
         <div class="line">
             <% for(let i=1;i<=code.split('\n').length;i++) { %>
@@ -79,13 +87,14 @@
             <pre><code><%= code %></code></pre>
         </div>
     </div>
+    
     <script>
-       const Copy = ()=>{ 
-        navigator.clipboard
-  .writeText(window.location.href)
-  .then(() => alert("Copied to clipboard"))
-  .catch((err) => console.log(err))
-       }
-    </script>
+        const Copy = ()=>{ 
+         navigator.clipboard
+   .writeText(window.location.href)
+   .then(() => alert("Copied to clipboard"))
+   .catch((err) => console.log(err))
+        }
+     </script>
 </body>
 </html>
