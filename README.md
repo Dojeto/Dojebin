@@ -2,7 +2,7 @@
 
 DojeBin is an elegant, free and open-source pastebin web application written from the ground up in Nodejs and publicly 
 
-<h3> Hosted At </h3>: https://codebin-production.up.railway.app/
+<h3> Hosted At : https://codebin-production.up.railway.app/ </h3>
 
 Step 1. Click on a + button :
 
